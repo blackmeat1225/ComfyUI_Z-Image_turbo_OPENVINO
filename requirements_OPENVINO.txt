@@ -1,0 +1,12 @@
+torch
+torchvision
+optimum[openvino,nncf]
+openvino
+transformers
+diffusers
+accelerate
+gradio
+Pillowpi
+openvino-genai==2026.0.0
+git+https://github.com/huggingface/diffusers
+git+https://github.com/openvino-dev-samples/optimum-intel.git@zimage
