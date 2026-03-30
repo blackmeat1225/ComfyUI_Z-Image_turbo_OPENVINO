@@ -4,8 +4,4 @@ Openvino Custom_node run in  Comfyui , Very Very Very Fast For  INTEL CPU wiht i
 希望讓intel 內顯的玩家也可以試試看, Z image turbo gguf Q2 跑一張512x512 step7 就要花約1500s,  現在用這個node 快了約20倍，趕快來試吧
 ![chrome_SdntWHBXma](https://github.com/user-attachments/assets/710daad0-e456-4198-9dc3-6506fd410e8d)
 重點：
-pip install git+https://github.com/huggingface/diffusers
-pip install git+https://github.com/openvino-dev-samples/optimum-intel.git@zimage
-pip install nncf
-pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-pip install openvino==2025.4
+ pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
