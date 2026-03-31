@@ -18,7 +18,7 @@ cd /ComfyUI/custom_nodes/<br>
 git clone https://github.com/blackmeat1225/ComfyUI_Z-Image_turbo_OPENVINO.git<br>
 cd  /ComfyUI/custom_nodes/ComfyUI_Z-Image_turbo_OPENVINO<Br>
 <Br>
-2.install requirements<br>
+2.install requirements  **must do uninstall**<br>
 powershell<bR>
 python.exe -m pip install --upgrade pip<br>
 pip3 uninstall -y optimum transformers optimum-intel diffusers<br>
