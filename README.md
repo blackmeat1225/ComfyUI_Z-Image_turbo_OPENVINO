@@ -5,3 +5,6 @@ Openvino Custom_node run in  Comfyui , Very Very Very Fast For  INTEL CPU wiht i
 ![chrome_SdntWHBXma](https://github.com/user-attachments/assets/710daad0-e456-4198-9dc3-6506fd410e8d)
 重點：
  pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+
+模型是這位大大作的
+https://huggingface.co/hsuwill000/Z-Image-Turbo-ov
