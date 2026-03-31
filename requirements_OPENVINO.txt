@@ -6,7 +6,7 @@ transformers
 diffusers
 accelerate
 gradio
-Pillowpi
+Pillow
 openvino-genai==2026.0.0
 git+https://github.com/huggingface/diffusers
 git+https://github.com/openvino-dev-samples/optimum-intel.git@zimage
