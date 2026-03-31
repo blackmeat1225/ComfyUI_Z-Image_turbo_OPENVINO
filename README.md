@@ -20,10 +20,15 @@ cd  /ComfyUI/custom_nodes/ComfyUI_Z-Image_turbo_OPENVINO<Br>
 <Br>
 2.install requirements<br>
 powershell<bR>
-pip install -r requirements_OPENVINO.txt<br>
+python.exe -m pip install --upgrade pip<br>
+pip3 uninstall -y optimum transformers optimum-intel diffusers<br>
+pip3 install git+https://github.com/huggingface/diffusers<br>
+pip3 install git+https://github.com/openvino-dev-samples/optimum-intel.git@zimage<br>
+pip3 install nncf<br>
+pip3 install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu<br>
+pip3 install openvino==2025.4<br>
 <BR>
-重點：<br>
- pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu<br>
 <br>
 模型是這位大大作的<Br>
 https://huggingface.co/hsuwill000/Z-Image-Turbo-ov<br>
+<br>
