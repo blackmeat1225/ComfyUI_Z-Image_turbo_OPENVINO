@@ -12,7 +12,7 @@ Installation:
 1.get repo
 powershell
 cd /ComfyUI/custom_nodes/
-git clone 
+git clone https://github.com/blackmeat1225/ComfyUI_Z-Image_turbo_OPENVINO.git
 cd  /ComfyUI/custom_nodes/ComfyUI_Z-Image_turbo_OPENVINO
 
 2.install requirements
