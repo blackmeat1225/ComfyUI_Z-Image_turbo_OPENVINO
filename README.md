@@ -94,7 +94,7 @@ The outfit has a glossy finish, giving it a sleek and elegant look...
 
 > 📦 需要額外安裝：`pip install timm`
 
-看兩張圖，比較久，但效果穩定，偶有火柴人殘影。
+看兩張圖，比較久，但效果穩定，"偶爾沒有"火柴人殘影。
 
 <div align="center">
 <img src="https://github.com/user-attachments/assets/b2d22fcd-e312-4d77-b650-0afc3c3a4a5b" width="100%" alt="Method 2 示例"/>
