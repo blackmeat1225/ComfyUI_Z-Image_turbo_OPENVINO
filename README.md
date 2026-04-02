@@ -1,5 +1,5 @@
 <div align="center">
-
+(ReadMe →Claude)
 <img src="https://github.com/user-attachments/assets/710daad0-e456-4198-9dc3-6506fd410e8d" alt="ComfyUI Z-Image Turbo OpenVINO Banner" width="100%"/>
 
 # ⚡ ComfyUI\_Z-Image\_turbo\_OPENVINO
