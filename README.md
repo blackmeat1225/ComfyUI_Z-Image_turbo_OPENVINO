@@ -42,7 +42,7 @@ cd /ComfyUI/custom_nodes/
 git clone https://github.com/blackmeat1225/ComfyUI_Z-Image_turbo_OPENVINO.git
 cd /ComfyUI/custom_nodes/ComfyUI_Z-Image_turbo_OPENVINO
 ```
-
+model_path=D:\ComfyUI\models\Z_image_Turbo
 ### Step 2 — 安裝依賴 / Install requirements
 
 > ⚠️ **必須先執行 uninstall 步驟！**
