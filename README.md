@@ -25,7 +25,7 @@
 | 方案 | 解析度 | Steps | 時間 |
 |------|--------|-------|------|
 | 🐢 Z-Image Turbo GGUF Q2 | 512×512 | 7 | ~1500 秒 |
-| ⚡ **本節點 (OpenVINO)** | 512×512 | 7 | **~75 秒 (約快 20 倍！)** |
+| ⚡ **本節點 (OpenVINO)** | 512×512 | 7 | **~90 秒 (約快 20 倍！)** |
 
 > 💡 **模型作者（非本人）：** [hsuwill000 — Z-Image-Turbo-ov](https://huggingface.co/hsuwill000/Z-Image-Turbo-ov)
 
