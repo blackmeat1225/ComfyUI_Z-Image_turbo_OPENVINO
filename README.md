@@ -106,7 +106,7 @@ The outfit has a glossy finish, giving it a sleek and elegant look...
 
 *由 DeepSeek AI 設計*
 
-一眼看一個 → 把兩張圖先合併成一張再看，速度較快，但偶爾會出雙胞胎 👯
+👯
 
 <div align="center">
 <img src="https://github.com/user-attachments/assets/cfe5c726-ba71-48ba-9f79-1e8b8d455021" width="100%" alt="Method 3 示例"/>
@@ -115,7 +115,7 @@ The outfit has a glossy finish, giving it a sleek and elegant look...
 ---
 
 ### 🟣 Method 4 — Qwen2.5-VL-7B（偽 ControlNet）
-
+一眼看一個 → 把兩張圖先合併成一張再看，速度較快，但偶爾會出雙胞胎 
 *由 DeepSeek AI 設計*
 
 <div align="center">
