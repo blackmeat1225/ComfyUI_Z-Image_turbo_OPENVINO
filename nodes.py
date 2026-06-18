@@ -388,21 +388,30 @@ class ZIMT_LORAS:
         self.current_device = ""
         self.current_transformer = ""
 
-    # 固定模型根目錄（依你的快取路徑）
+    # 固定模型根目錄
     MODEL_ROOT = r"F:\huggingface_cache\hub\models--hsuwill000--Z-Image-Turbo-ov\snapshots\d10ba44f52e2650cac10999ef9e10014d104cf55"
 
-    # 快照中所有 transformer 資料夾（依 ls 輸出）
-    TRANSFORMER_LIST = [
-        "transformer",          # 最新/預設
-        "CCY_CAPtransformer_INT8",
-        "CCY_transformer",
-        "CCY_1980_transformer",
-        "CCY_CAPtransformer",
-        "1980_transformer",
-        "kaoshengchen_1980_transformer",
-        "CCYsm6000_transformer",
-        "CCYsm_transformer",
-    ]
+    @staticmethod
+    def _scan_transformers(model_root: str) -> list[str]:
+        """
+        自動掃描 model_root 下所有名稱包含 'transformer' 的子資料夾。
+        'transformer'（預設）永遠排在第一位。
+        """
+        if not os.path.isdir(model_root):
+            return ["transformer"]
+
+        entries = [
+            d for d in os.listdir(model_root)
+            if "transformer" in d.lower()
+            and os.path.isdir(os.path.join(model_root, d))
+        ]
+
+        # 確保預設 "transformer" 排第一
+        default = "transformer"
+        others  = sorted(e for e in entries if e != default)
+        result  = ([default] if default in entries else []) + others
+
+        return result if result else ["transformer"]
 
     @classmethod
     def INPUT_TYPES(s):
@@ -417,6 +426,10 @@ class ZIMT_LORAS:
             device_list.append("GPU")
         device_list.append("CPU")
 
+        # ✅ 每次開啟節點時動態掃描
+        transformer_list = ZIMT_LORAS._scan_transformers(ZIMT_LORAS.MODEL_ROOT)
+        print(f"[ZIMT_LORAS] 偵測到 Transformer: {transformer_list}")
+
         return {
             "required": {
                 "prompt":      ("STRING",  {"multiline": True, "default": "一個可愛的女孩，動漫風格"}),
@@ -424,9 +437,8 @@ class ZIMT_LORAS:
                 "height":      ("INT",     {"default": 512, "min": 256, "max": 4096, "step": 8}),
                 "steps":       ("INT",     {"default": 7,   "min": 1,   "max": 20,   "step": 1}),
                 "seed":        ("INT",     {"default": 0,   "min": 0,   "max": 0xffffffffffffffff}),
-                "device":      (device_list, {"default": device_list[0]}),
-                # ✅ 新增：Transformer 選擇下拉
-                "transformer": (ZIMT_LORAS.TRANSFORMER_LIST, {"default": "transformer"}),
+                "device":      (device_list,      {"default": device_list[0]}),
+                "transformer": (transformer_list, {"default": transformer_list[0]}),
             }
         }
 
